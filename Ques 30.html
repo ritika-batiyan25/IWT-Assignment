@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques-30</title>
+    <script type="text/javascript">
+        let randomNo=Math.floor(Math.random() *1000) +1;
+
+        function ClearInput(){
+            document.getElementById("GuessNumber").value="";
+        }
+        function x(){
+            let y = parseInt(document.getElementById("GuessNumber").value);
+            if(y>1 && y<1000){
+                if(y === randomNo){
+                    alert("Congratulations!! You Guessed the Correct Number");
+                    randomNo=Math.floor(Math.random() * 1000)+1;
+                    ClearInput();
+                }
+                else if(y<randomNo){
+                    alert("Number is low");
+                    ClearInput();
+                }
+                else
+                    alert("Number is high");
+                    ClearInput();
+            }
+        }
+
+    </script>
+    <style>
+        body{
+            background-image: url("images/guess.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .g1{
+          text-align: center;
+          margin-top: 150;
+          box-sizing: border-box;
+          border-style:none;
+          border-color: aqua;
+          background-color: azure;
+          padding: 30;
+          box-shadow: red;
+            
+        }
+        .t{
+            font-size: 50;
+            font-weight:bold;
+            color:red;
+        }
+        .p{
+            font-size: 30;
+
+        }
+        </style>
+    
+</head>
+<body>
+    <div class="g1">
+    <p class="t">Guess the Number</p>
+    <label class="p">Enter the number</label>
+    <input type="number"id="GuessNumber"/><br><br>
+    <button onclick="x()">Guess</button>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question24</title>
+</head>
+<body>
+    <form action="#">
+        <div>
+    <input type="number"  name="input" onchange="convert()">
+    <select name="Inop" id="" onchange="convert()">
+        <option value=K>Kelvin</option>
+        <option value=C>Celsius</option>
+        <option value=F>Fahrenheit</option>
+    </select>
+    <input type="text"  name="output"/>
+    <select name="Outop" id="" onchange="convert()">
+        <option value=K>Kelvin</option>
+        <option value=C>Celsius</option>
+        <option value=F>Fahrenheit</option>
+
+    </select>
+    <br>
+    </div>
+    </form>
+    <button onclick="convert()">Convert</button>
+    
+    <script>
+    function convert()
+    {
+        input=document.forms[0].elements[0].value;
+        Inop=document.forms[0].elements[1].value;
+        Outop=document.forms[0].elements[3].value;
+        if(Inop=='C'&& Outop=='K')
+        {
+            res=parseFloat(input)+273;
+        }
+        else if(Inop=='K'&& Outop=='C'){
+            res=parseFloat(input)-273;
+        }
+        else if(Inop=='F'&& Outop=='C'){
+            res=(parsefloat(input)-32)*(5/9);
+        }
+        else if(Inop=='F'&& Outop=='K')
+        {
+            res=(parsefloat(input)-32)*5/9+273;
+        } 
+        else if(Inop=='K'&& Outop=='F')
+        {
+            res=((parsefloat(input)-273)*9/5)+32;
+        }
+        else{
+            res=input;
+        }
+        document.forms[0].elements[2].value=res;
+    }
+</script>
+</body>
+</html>

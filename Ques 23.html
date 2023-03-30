@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card Layout</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .card{
+                width: 33%;
+                box-shadow: 2px 2px 4px black;
+                padding: 10px;
+            }
+            .card > img {
+                width: 100%;
+            }
+            .desc{
+                padding: 20px;
+                color: brown;
+            }
+            .container{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="display: flex;">
+        <script>
+            for(i=0;i<3;i++){
+                images = ["2.jpg" , "3.jpg" , "4.jpg"]
+                titles = ["Annual Function" , "Guest Lecture" , "Apaji Fest"]
+                card = "<div class = 'card'>" + "<img src='images/"+images[i]+"' />" + "<div class = 'desc' >"
+                    + "<h1>"+ titles[i] +"</h1>" + "<p>Introduction</p>" + " </div>" + " </div>"
+                document.write(card);
+            }
+        </script>
+        </div>
+    </body>
+</html>

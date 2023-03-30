@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            .container{
+                border: 2px dashed black;
+                display: flex;
+                flex-direction: row;
+                background-color: rgb(206, 30, 86);
+                
+                height: 100%;
+                width:100%;
+                border-color: rgb(5, 5, 5);
+            
+            }
+            
+            .one >img{
+                
+                height: 150px;
+                width: 150px;
+                
+            }
+            .one{
+                width: 100px;
+                height: 100px;
+                position:relative;
+                animation-name: animation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            
+            
+            @keyframes animation{
+                0%   { left:0px; top:10px;}
+                25%  { left:1150px; top:0px;}
+                50%  {left:1150px; top:450px;}
+                75%  { left:0px; top:450px;}
+                100%  { left:0px; top:10px;}
+                
+            }
+        
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="one">
+                <img src="images/11.jpg"/>
+            </div>
+        </div>
+    </body>
+</html>
